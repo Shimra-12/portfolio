@@ -1,6 +1,14 @@
+* {
+	transition: all 0.2s ease-in-out;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
-	font-family: Arial, sans-serif;
+	font-family: "Ubuntu", sans-serif;
 	background: #f5f5f5;
 	color: #222;
 	}
@@ -37,19 +45,27 @@ nav a {
 	color: white;
 	margin-left: 15px;
 	text-decoration: none;
+	position: relative;
+	transition: 0.3s;
 	}
 
 nav a:hover {
 	color: #4caf50;
+	transform: translate(5px);
 	}
 
 section {
-	padding: 60px 20px;
+	padding: 80px 20px;
 	}
 
 h2 {
 	border-left: 5px solid #4caf50;
-	padding-left: 10px;
+	padding-left: 12px;
+	margin-bottom: 20px;
+}
+
+h2:hover {
+	transform: translateY(-8px);
 }
 
 .hero {
@@ -66,14 +82,20 @@ h2 {
 	flex: 1;
 	background: white;
 	border-radius: 10px;
-	padding: 20px;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	transition: 0.3s;
+	padding: 25px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	transition: all 0.3s ease;
 	margin: 10px 0;
+	margin-bottom: 20px;
 	}
 
 .project-box:hover {
-	transform: translateY(-5px);
+	transform: translateY(-8px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-box a {
+	text-decoration: none;
 }
 
 button {
@@ -83,10 +105,15 @@ button {
 	padding: 10px 15px;
 	cursor: pointer;
 	border-radius: 5px;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 0.3s ease;
+	margin-right: 8px;
 }
 
 button:hover {
-	background: 45a049;
+	background: #45a049;
+	transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
